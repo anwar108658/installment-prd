@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true" class="login">
+  <main class="shell">
+    <header class="brand">
+      <img src="../../../../assets/icon/logo.png" width="100"  class="rounded-full bg-white animate__animated animate__zoomIn" alt="Logo">
+      <p>Sales and  Recovery, in one place.</p>
+    </header>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <ion-input
+        label="Email"
+        labelPlacement="floating"
+        fill="outline"
+        type="email"
+        inputmode="email"
+        autocomplete="username"
+        formControlName="email"
+        errorText="Enter a valid email address."
+      ></ion-input>
+
+      <ion-input
+        label="Password"
+        labelPlacement="floating"
+        fill="outline"
+        type="password"
+        autocomplete="current-password"
+        formControlName="password"
+        errorText="Enter your password."
+      >
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+
+      @if (error()) {
+        <p class="form-error" role="alert">
+          <ion-icon name="alert-circle-outline"></ion-icon>
+          {{ error() }}
+        </p>
+      }
+
+      <ion-button expand="block" type="submit" [disabled]="loading()">
+        @if (loading()) {
+          <ion-spinner name="crescent"></ion-spinner>
+        } @else {
+          Sign in
+        }
+      </ion-button>
+    </form>
+
+    <footer>Accounts are created by your admin.</footer>
+  </main>
+</ion-content>

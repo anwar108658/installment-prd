@@ -10,6 +10,45 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
+
+:root {
+  --qist-bg: #f3f6fa;
+  --qist-card: #ffffff;
+  --qist-panel: #f7f9fc;
+  --qist-input-bg: #ffffff;
+  --qist-ink: #14243a;
+  --qist-muted: #65758a;
+  --qist-line: #cbd5e1;
+  --qist-card-border: #e3e9f0;
+  --qist-accent: #f2a541;
+  --qist-primary-hover: #102d4d;
+
+  --ion-color-primary: #183b63;
+  --ion-color-primary-rgb: 24, 59, 99;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --qist-bg: #0b1220;
+    --qist-card: #121d2d;
+    --qist-panel: #172438;
+    --qist-input-bg: #121d2d;
+    --qist-ink: #edf3fa;
+    --qist-muted: #9aabc0;
+    --qist-line: #34445a;
+    --qist-card-border: #29384c;
+    --qist-accent: #f2b451;
+    --qist-primary-hover: #244b75;
+
+    --ion-color-primary: #f2b451;
+    --ion-color-primary-rgb: 242, 180, 81;
+    --ion-color-primary-contrast: #14243a;
+    --ion-color-primary-contrast-rgb: 20, 36, 58;
+  }
+}
+
 @import "@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
